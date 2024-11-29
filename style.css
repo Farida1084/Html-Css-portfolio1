@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4d2d2d;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.image img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid #4d2d2d; 
+    margin-top:  25px;
+}
+
+.image img:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        scale: 1;
+    } 
+    50%{
+        scale: 1.05
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #c54747;
+    border-radius: 50%;
+    color: #c54747;
+    margin: 20px 15px 10px 0px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+
+
+
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px #c54747);
+    background-color: #b33838;
+    color: white;
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.intro p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+/* Projektsektion */
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.projects h2{
+
+   width: 100%;
+   text-align: center;
+   margin-bottom: 1rem;
+   font-size: 2rem;
+   color: #333;
+}
+.project-card {
+    background-color: white;
+    border: 0.5px solid #4d2d2d;
+    border-radius: 10px;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.project-card img {
+     width: 100%;
+    height: 180px; 
+    
+}
+
+.project-card h3 {
+    margin: 1rem 0;
+}
+
+.project-card p {
+    padding: 0 1rem;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4d2d2d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card .btn:hover{
+    background-color: #b33838;
+}
+
+/* Kontaktsektion */
+#contact {
+    background-color: #4d2d2d;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+#contact input, #contact textarea {
+    width: 80%;
+    max-width: 500px;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+#contact button:hover {
+    background-color: #ccc;
+}
+
+.email {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.email a {
+    color: #b33838;  /* Färg på mejladressen */
+    text-decoration: none;
+}
+
+.email a:hover {
+    text-decoration: underline;  /* Understrykning vid hover */
+}
+
+@media (min-width: 768px) {
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;              
+        justify-content: center;    
+    }
+
+    .project-card {
+        width: 45%;               
+        margin: 1rem;
+       
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        justify-content: space-around; 
+        max-width: 1024px; 
+        margin: 0 auto; 
+    }
+
+    .project-card {
+        width: 30%;          
+    }
+}
+
+/* Om mig-sektion */
+
+.about-me {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 300px;
+    border-radius: 50%; 
+    margin-top: 5rem;
+    border: 1px solid #4d2d2d;  
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+
+    .profile-image {
+        margin-right: 2rem;
+    }
+}
+
+
+/* Popup-stil */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Visas när popupen är måltavlan */
+.popup:target {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.close-btn:hover {
+    color: #000;
+}
